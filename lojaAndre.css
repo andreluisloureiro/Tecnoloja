@@ -45,7 +45,7 @@ h1 {
   width: 100%;
   background-color: white;
   margin-bottom: 70px;
-  
+
 }
 
 .main-header.scroll {
@@ -53,9 +53,8 @@ h1 {
   border-bottom: solid 2px #2d776b;
 }
 
-.nomeLoja {
+.logoLoja {
   display: flex;
-  position: fixed;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -63,7 +62,7 @@ h1 {
   transition: 400ms;
 }
 
-.nomeLoja.scroll {
+.logoLoja.scroll {
   height: 60px;
   font-size: 40px;
 }
@@ -72,12 +71,18 @@ h1 {
   width: 87vw
 }
 
+
+#margin {
+  margin-bottom: 0px;
+}
+
 .tituloTopico {
   font-family: 'Roboto Condensed', sans-serif;
   font-style: italic;
   font-size: 5vw;
   font-weight: 700;
   margin: 20px;
+  
   color: #27292A;
   width: inherit;
   text-align: left;
@@ -124,7 +129,7 @@ h1 {
   width: 200px;
 }
 
-.carrinhoItem.aparecer {
+.carrinhoItem.appear {
   position: relative;
   transform: scale(1);
   height: 0px;
@@ -142,7 +147,7 @@ h1 {
 }
 
 
-.textoCompra {
+.textCompra {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,24 +158,14 @@ h1 {
   transform-origin: center;
 }
 
-.textoCompra.aparecer {
+.textCompra.appear {
   margin: 20px;
   height: 20px;
 }
 
-.textoCompra.surgir {
+.textCompra.appear {
   transform: scale(1);
   transform-origin: center;
-}
-
-.textoCompra2 {
-  text-decoration: none;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
-  font-size: max(1vw, 15px);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #3C3C3C;
 }
 
 .imagemItems {
@@ -178,7 +173,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.imagens {
+.itemImage {
   position: relative;
   height: 13vw;
   width: 13vw;
@@ -190,7 +185,7 @@ h1 {
   margin-bottom: 0px;
 }
 
-.textoItems {
+.textItems {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -208,12 +203,12 @@ h1 {
 
 }
 
-.texto {
+.text {
   text-align: left;
   margin: 0px;
 }
 
-.textoItems2 {
+.textItems2 {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -226,7 +221,7 @@ h1 {
   color: #27292A;
 }
 
-.preçoItem {
+.itemPrice {
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   justify-content: left;
@@ -276,7 +271,7 @@ button {
 
 }
 
-.path{
+.path {
   pointer-events: none;
 }
 
@@ -338,7 +333,7 @@ button {
 }
 
 
-.divGeralBaixoImaginaria{
+.infosContainerDiv {
   display: flex;
   align-items: center;
   text-align: center;
@@ -354,7 +349,7 @@ button {
   font-weight: 700;
 }
 
-.divOpacidadeImaginaria{
+.alignmentDiv {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -364,7 +359,7 @@ button {
 
 
 
-.divDivFotoItemCarrinhoImaginaria {
+.itemNameDiv {
   display: flex;
   align-items: center;
   text-align: center;
@@ -372,17 +367,8 @@ button {
   transition: 250ms;
 }
 
-.divFotoItemCarrinhoImaginaria {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  flex-direction: row;
+.itemName{
   width: 8.5vw;
-}
-
-.fotoItemCarrinhoImaginaria {
-  width:100px;
   margin: 0px;
   position: relative;
   display: flex;
@@ -393,14 +379,14 @@ button {
   margin: 0px;
 }
 
-.itensLateraisImaginarios {
+.sideInfoItems {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: inherit;
 }
 
-.divDivItemTituloImaginaria {
+.nameAlignmentDiv {
   display: flex;
   align-items: center;
   text-align: center;
@@ -408,36 +394,11 @@ button {
   transition: 250ms;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: none;
   width: 10px;
-  margin: max(1vw, 27px);;
+  margin: max(1vw, 27px);
 }
 
-.divItemTituloImaginaria {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: left;
-  flex-direction: row;
-  transition: 250ms;
-  margin: 0px;
-  padding: 0px;
-}
-
-.itemTituloImaginaria{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5vw;
-  font-weight: 600;
-  opacity: 0%;
-  display: none;
-}
-
-.divDivInputImaginaria {
+.quantityDiv {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -447,46 +408,20 @@ button {
   transition: 250ms;
   margin-left: 7vw;
   margin-right: 14vw;
-  width:1vw;
+  width: 1vw;
   padding: 0px;
 }
 
-.divDivInputImaginaria2 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  flex-direction: row;
-  transition: 250ms;
-  margin-left: 7vw;
-  margin-right: 14vw;
-  width:1vw;
-  padding: 0px;
-}
-
-
-.divInputImaginaria {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-
-.inputImaginaria {
-
+.quantityInfo {
   font-family: "Roboto Condensed", sans-serif;
   padding: 5px;
   border: black;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.6vw;
   text-align: center;
-
 }
 
-.divItemPreçoImaginaria {
+.priceInfoDiv {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -501,14 +436,14 @@ button {
 }
 
 
-.itemPreçoImaginaria {
+.priceInfo {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.6vw;
   margin: 0px;
 }
 
 
-.divItemInputImaginario {
+.deleteItemAlignmentDiv {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -518,25 +453,8 @@ button {
   transition: 250ms;
   padding: 0px;
   margin-left: 6vw;
+  width: 14px;
 }
-
-.botaoApagarImaginario {
-  color: #464646;
-  transition: 200ms;
-  opacity: 0%;
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 .preçoTotal {
   display: flex;
@@ -581,9 +499,6 @@ button {
 
 }
 
-
-
-
 .divDivItemTitulo {
   display: flex;
   align-items: center;
@@ -592,9 +507,8 @@ button {
   transition: 250ms;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: none;
   width: 10px;
-  margin: max(1vw, 27px);;
+  margin: max(1vw, 27px);
 }
 
 .divItemTitulo {
@@ -619,7 +533,7 @@ button {
   transition: 250ms;
   margin-left: 7vw;
   margin-right: 14vw;
-  width:1vw;
+  width: 1vw;
   padding: 0px;
 }
 
@@ -676,7 +590,7 @@ button {
 }
 
 .fotoItemCarrinho {
-  width:100px;
+  width: 100px;
   margin: 0px;
   position: relative;
   display: flex;
@@ -699,10 +613,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 .input {
   width: 25px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -717,30 +627,7 @@ input[type=number] {
   font-size: 15px;
 }
 
-.divItemPreçoImaginaria2 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  flex-direction: row;
-  transition: 250ms;
-  margin-left: 0vw;
-  margin-right: 0vw;
-  padding: 0px;
-  width: 3vw;
-}
-
-.divPreçoImaginaria {
-  display: flex;
-
-  align-items: center;
-  text-align: center;
-  width: 200px;
-
-}
-
-.preçoRS{
+.preçoRS {
   font-family: 'Roboto Condensed', sans-serif;
   border: black;
   font-size: 1.8vw;
@@ -753,28 +640,24 @@ input[type=number] {
   font-size: 1.8vw;
 }
 
-.inputImaginaria2 {
-  width: 15vw;
-    font-family: "Roboto Condensed", sans-serif;
-    padding: 5px;
-    border: black;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.6vw;
-    text-align: center;
-}
-
-
 .sticky {
   display: block;
   position: sticky;
   top: 0;
 }
 
+.itensSuperiores {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+}
+
 .imagemCarrinho {
   height: 20px;
   width: 20px;
   transition: 200ms;
-  color: #e24242;
+  cursor: pointer;
 }
 
 .imagemCarrinho:hover {
@@ -782,93 +665,43 @@ input[type=number] {
 }
 
 
-.imagemCarrinho2 {
+.imagemLoja{
   height: 25px;
   width: 25px;
-}
-
-.imagemCarrinho2:hover {
- filter: invert(45%) sepia(6%) saturate(4615%) hue-rotate(121deg) brightness(80%) contrast(73%);
-}
-
-.ancoraBotaoCarrinho {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0px;
-}
-
-
-.ancoraBotaoLoja {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0px;
-}
-
-.botaoCarrinho {
-  display: flex;
-  flex-direction: column;
-  position: -webkit-sticky;
-  position: fixed;
-  top: 11px;
-  right: 0px;
-  width: 50px;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(150px);
-  padding: 10px;
-  border-radius: 10px;
   cursor: pointer;
-  background-color: white;
-  transition: 400ms;
-  z-index: +3;
+  transition: 200ms;
 }
 
-.botaoCarrinho.scroll {
-  top: 7px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+.imagemLoja:hover {
+  filter: invert(45%) sepia(6%) saturate(4615%) hue-rotate(121deg) brightness(80%) contrast(73%);
 }
 
-.botaoCarrinho.aparecer {
-  transform: translateX(-10px);
-
+.cartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50vh);
+  transition: 500ms;
 }
 
-.botaoCarrinho.movimento {
+.cartButton.appear {
+  transform: translateX(-3vh);
+}
+
+.cartButton.movimento {
   transform: translateX(150px);
 }
 
 .botaoLoja {
   display: flex;
-  flex-direction: column;
-  position: -webkit-sticky;
-  position: fixed;
-  top: 6px;
-  margin: 0px;
-  width: 50px;
   align-items: center;
   justify-content: center;
-  transform: translateX(-150px);
-  z-index: +1;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: white;
-  cursor: pointer;
-  transition: 400ms;
-}
-
-.botaoLoja.scroll {
-  top: -5px;
+  transform: translateX(-50vh);
+  transition: 600ms;
 }
 
 .botaoLoja.movimento {
-  transform: translateX(10px);
+  transform: translateX(3vh);
 }
 
 .topicos {
@@ -901,7 +734,7 @@ input[type=number] {
   align-items: center;
   text-align: center;
   justify-content: center;
-  
+
 }
 
 .carrinhoAnim.carrinhoMovimento {
@@ -912,7 +745,7 @@ input[type=number] {
   position: relative;
 }
 
-.textoCarrinhoBotao {
+.textCarrinhoBotao {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
   margin: 0px;
@@ -920,7 +753,7 @@ input[type=number] {
   transition: 200ms;
 }
 
-.textoCarrinhoBotao:hover {
+.textCarrinhoBotao:hover {
   color: #2d776b;
 }
 
@@ -960,12 +793,12 @@ input[type=number] {
     height: 60px;
   }
 
-  .nomeLoja {
+  .logoLoja {
     height: 60px;
   }
 
 
-  .botaoCarrinho {
+  .cartButton {
     top: 0px;
   }
 
@@ -973,25 +806,9 @@ input[type=number] {
     top: -5px;
   }
 
-  .divDivFotoItemCarrinhoImaginaria {
-    display: flex;
+  .quantityDiv {
+    display: none;
   }
-
- .divFotoItemCarrinhoImaginaria {
-  width: 30vw;
- }
-
- .fotoItemCarrinhoImaginaria{
-  font-size: 4vw;
- }
-
- .divDivInputImaginaria{
-  display: none;
- }
-
- .divItemPreçoImaginaria{
-  display: none;
- }
 
   .divGeralBaixo {
     width: 100vw;
@@ -1034,7 +851,7 @@ input[type=number] {
     width: auto;
     margin: 0px;
   }
-  
+
   .divDivInput {
     margin: 15px;
     margin-left: 0px;
@@ -1062,7 +879,7 @@ input[type=number] {
     width: auto;
   }
 
-  .divItemInput{
+  .divItemInput {
     margin: 6vw;
   }
 
@@ -1085,28 +902,15 @@ input[type=number] {
     margin: 6vw;
   }
 
-
-  .inputImaginaria2 {
-    width: 20vw;
-    font-size: 4vw;
-
-  }
-  
-
-  .preçoRS{
-    font-size: 4vw;
-  }
-  
-  
-  .preçoTotal2 {
+  .preçoRS {
     font-size: 4vw;
   }
 
 }
 
+
+
 @media (min-width : 1550px) {
-
-
   .topicos.topicosMovimento {
     transform: translateX(-2800px);
   }
@@ -1124,8 +928,56 @@ input[type=number] {
   }
 
   
-  .textoCompra.aparecer {
+  .textCompra.appear {
   margin-bottom: 1vw;
   }
 
+}
+
+.hamburguer {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  margin: 10px;
+  z-index: 1;
+  transform: translateX(2vh);
+}
+
+#hblack {
+  display: flex;
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  height:  100vh;
+  background-color: black;
+  color: #27292A;
+  opacity: 0%;
+  top: 0px;
+  transition: 600ms;
+  pointer-events: none;
+}
+
+#hblack.appear{
+  z-index: 3;
+  opacity: 30%;
+}
+
+.hamburguerForeground{
+  display: flex;
+  position: fixed;
+  z-index: 4;
+  width: 5vw;
+  height:  100vh;
+  background-color: white;
+  top: 0px;
+  opacity: 0%;
+  transition: 600ms;
+  pointer-events: none;
+  transform: translateX(-20vw);
+  
+}
+
+.hamburguerForeground.appear{
+  opacity: 100%; 
+  transform: translateX(0px);
 }

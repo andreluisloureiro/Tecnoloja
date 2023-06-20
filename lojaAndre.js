@@ -6,8 +6,6 @@ if (document.readyState == 'loading') {
 
 ready()
 
-readyDois()
-
 function ready() {
   var removeCartItemButtons = document.getElementsByClassName('botaoApagar')
   for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -15,100 +13,65 @@ function ready() {
     buttonRemove.addEventListener('click', removeCartItem)
   }
 
-
-
-
-
-}
-
-function readyDois() {
   var addCartItemButtons = document.getElementsByClassName('botaoCompra')
   for (var o = 0; o < addCartItemButtons.length; o++) {
     var buttonAdd = addCartItemButtons[o]
     buttonAdd.addEventListener('click', addCartItem)
-
   }
-}
 
+}
 
 function addCartItem(event) {
-  var animationBotaoCarrinho = document.getElementsByClassName('botaoCarrinho')[0]
-  animationBotaoCarrinho.classList.add('aparecer')
-
-
-
-
-
+  var animationCartButton = document.getElementsByClassName('cartButton')[0]
+  animationCartButton.classList.add('appear')
   var button = event.target
   var shopItem = button.parentElement.parentElement
-  var title = shopItem.getElementsByClassName('texto')[0].innerText
-  var price = shopItem.getElementsByClassName('preçoItem')[0].innerText
-  var imageSrc = shopItem.getElementsByClassName('imagens')[0].src
-  var imagemCarrinho = button.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
-  var texto = button.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
-
-
-  timeout = setTimeout(aparecer, 000)
-
-  function aparecer() {
-    texto.classList.add("aparecer")
-
+  var itemTittle = shopItem.getElementsByClassName('text')[0].innerText
+  var itemPrice = shopItem.getElementsByClassName('itemPrice')[0].innerText
+  var imageSrc = shopItem.getElementsByClassName('itemImage')[0].src
+  var imagemCarrinho = shopItem.getElementsByClassName('carrinhoItem')[0]
+  var text = button.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
+  text.classList.add("appear")
+  timeout = setTimeout(appeartext, 200);
+  function appeartext() {
+    text.classList.add("appear")
   }
 
-
-
-  timeout = setTimeout(tudo, 000)
-
-  function tudo() {
-
-
-    timeout = setTimeout(desaparecerTexto, 2200);
-    function desaparecerTexto() {
-      texto.classList.remove("aparecer")
-    }
-
-    timeout = setTimeout(surgirTexto, 200);
-    function surgirTexto() {
-      texto.classList.add("surgir")
-    }
-
-    timeout = setTimeout(desurgirTexto, 1900);
-    function desurgirTexto() {
-      texto.classList.remove("surgir")
-    }
-
-    imagemCarrinho.classList.add("aparecer")
-
-
-
+  timeout = setTimeout(disappeartext, 1900);
+  function disappeartext() {
+    text.classList.remove("appear")
   }
 
+  timeout = setTimeout(disappeartext, 2200);
+  function disappeartext() {
+    text.classList.remove("appear")
+  }
 
-  addItemToCart(title, price, imageSrc)
+  imagemCarrinho.classList.add("appear")
+
+  addItemToCart(itemTittle, itemPrice, imageSrc)
 }
 
 
-function remover(title) {
-  var nomeItem = document.getElementsByClassName('texto')
+function remover(itemTittle) {
+  var nomeItem = document.getElementsByClassName('text')
   for (var k = 0; k < nomeItem.length; k++) {
-    var nomeItemTexto = nomeItem[k].innerText
-    if (nomeItemTexto === title.innerText) {
+    var nomeItemtext = nomeItem[k].innerText
+    if (nomeItemtext === itemTittle.innerText) {
       var removerCarrinho = nomeItem[k].parentElement.previousElementSibling.previousElementSibling
-      removerCarrinho.classList.remove("aparecer")
+      removerCarrinho.classList.remove("appear")
     }
   }
 }
 
-
-
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(itemTittle, itemPrice, imageSrc) {
   var cartRow = document.createElement('div')
   cartRow.classList.add('divGeralBaixo')
   var cartItems = document.getElementsByClassName('carrinhoPrincipal')[0]
   var cartItemNames = cartItems.getElementsByClassName('itemTitulo')
 
   for (var i = 0; i < cartItemNames.length; i++) {
-    if (cartItemNames[i].innerText == title) {
+    if (cartItemNames[i].innerText == itemTittle) {
 
       return
     }
@@ -125,7 +88,7 @@ function addItemToCart(title, price, imageSrc) {
    <div class="itensLaterais">
      <div class="divDivItemTitulo">
        <div class="divItemTitulo">
-         <h7 class="itemTitulo">${title}</h7>
+         <h7 class="itemTitulo">${itemTittle}</h7>
        </div>
      </div>
      <div class="divDivInput">
@@ -134,7 +97,7 @@ function addItemToCart(title, price, imageSrc) {
        </div>
      </div>
      <div class="divItemPreço">
-       <h7 class="itemPreço">${price}</h7>
+       <h7 class="itemPreço">${itemPrice}</h7>
      </div>
    </div>
    <div class="divItemInput">
@@ -150,10 +113,6 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 
-
-
-
-
 function removeCartItem(event) {
   var buttonClicked = event.target
   var divGeralBaixo = buttonClicked.parentElement.parentElement.parentElement
@@ -167,7 +126,6 @@ function removeCartItem(event) {
   function altura() {
   }
   var titulo = buttonClicked.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild
-  console.log(titulo)
   remover(titulo)
   timeout = setTimeout(alertFunc, 1300);
   function alertFunc(event) {
@@ -177,43 +135,38 @@ function removeCartItem(event) {
 }
 
 
-
-
-
 function change(event) {
   var divGeralBaixo = document.getElementsByClassName('divGeralBaixo')
   var valorTotal = 0
   for (var x = 0; x < divGeralBaixo.length; x++) {
     var items = divGeralBaixo[x]
-    var preçoItem = items.getElementsByClassName("itemPreço")[0].innerText
-    var preçoItemSemTexto = preçoItem.replace(/[^0-9,]/gi, "")
-    var preçoItemParsed = parseInt(preçoItemSemTexto, 10)
+    var itemPrice = items.getElementsByClassName("itemPreço")[0].innerText
+    var itemPriceSemtext = itemPrice.replace(/[^0-9,]/gi, "")
+    var itemPriceParsed = parseInt(itemPriceSemtext, 10)
     var quantidadeItems = items.getElementsByClassName('input')[0]
     var quantidade = quantidadeItems.value
-    if (quantidade < 1) {
-      quantidade = 1
-    }
-    if (quantidade >= 10) {
-      quantidade = 10
-    }
-    valorTotal = valorTotal + (preçoItemParsed * quantidade)
+    // if (quantidade < 1) {
+    //   quantidade = 1
+    // }
+    // if (quantidade >= 10) {
+    //   quantidade = 10
+    // }
+    valorTotal = valorTotal + (itemPriceParsed * quantidade)
   }
   var preçoEmBaixo = document.getElementsByClassName('preçoTotal')[0]
   var preçoEmBaixo2 = document.getElementsByClassName('preçoTotal2')[0]
   preçoEmBaixo.innerHTML = valorTotal
-  preçoEmBaixo2.innerHTML = valorTotal
+  preçoEmBaixo2.innerHTML = "R$" +  valorTotal
   if (valorTotal === 0) {
-    var animationBotaoCarrinho = document.getElementsByClassName('botaoCarrinho')[0]
+    var animationcartButton = document.getElementsByClassName('cartButton')[0]
     introLoja()
-    animationBotaoCarrinho.classList.remove('aparecer')
+    animationcartButton.classList.remove('appear')
   }
 }
 
 
-
-
-var botaoCarrinho = document.getElementById('botaoCarrinho')
-botaoCarrinho.addEventListener('click', introCarrinho)
+var cartButton = document.getElementById('cartButton')
+cartButton.addEventListener('click', introCarrinho)
 
 var botaoLoja = document.getElementById('botaoLoja')
 botaoLoja.addEventListener('click', introLoja)
@@ -221,6 +174,7 @@ botaoLoja.addEventListener('click', introLoja)
 
 
 function introCarrinho() {
+
 
 
   timeout = setTimeout(animation4, 0);
@@ -235,7 +189,6 @@ function introCarrinho() {
     topicosFixed.classList.toggle('topicosFixed')
   }
 
-
   timeout = setTimeout(animation5, 800);
   function animation5() {
     var animation = document.getElementsByClassName('carrinhoAnim')[0]
@@ -243,8 +196,8 @@ function introCarrinho() {
     var animation6 = document.getElementsByClassName('carrinhoAnim')[0]
     animation6.classList.toggle('carrinhoRelative')
   }
-  var animationBotaoCarrinho = document.getElementsByClassName('botaoCarrinho')[0]
-  animationBotaoCarrinho.classList.toggle('movimento')
+  var animationcartButton = document.getElementsByClassName('cartButton')[0]
+  animationcartButton.classList.toggle('movimento')
 
   timeout = setTimeout(delayCarrinho, 1800);
   function delayCarrinho() {
@@ -262,6 +215,7 @@ function introLoja() {
     var topicosEntrada = document.getElementsByClassName('topicos')[0]
     topicosEntrada.classList.toggle('topicosMovimento')
   }
+
   timeout = setTimeout(animation3, 900);
   function animation3() {
     var topicosFixed2 = document.getElementsByClassName('topicos')[0]
@@ -269,67 +223,47 @@ function introLoja() {
     var animation6 = document.getElementsByClassName('carrinhoAnim')[0]
     animation6.classList.toggle('carrinhoRelative')
   }
-  timeout = setTimeout(animation5, 0);
+
   function animation5() {
     var animation = document.getElementsByClassName('carrinhoAnim')[0]
     animation.classList.toggle('carrinhoMovimento')
   }
 
+  animation5()
+
   var animationBotaoLoja1 = document.getElementsByClassName('botaoLoja')[0]
   animationBotaoLoja1.classList.toggle('movimento')
 
-
   timeout = setTimeout(delayLoja, 1800);
   function delayLoja() {
-    var animationBotaoCarrinho = document.getElementsByClassName('botaoCarrinho')[0]
-    animationBotaoCarrinho.classList.remove('movimento')
+    var animationcartButton = document.getElementsByClassName('cartButton')[0]
+    animationcartButton.classList.remove('movimento')
   }
 
-
-
-
-
-
-
-
 }
-
-
-
-
 
 window.onscroll = () => {
-  var nav = document.getElementById("nomeLoja")
-  var nav2 = document.getElementById("main-header")
-  var nav3 = document.getElementById("botaoCarrinho")
-  var nav4 = document.getElementById("botaoLoja")
+  var headerScroll = document.getElementById("logoLoja")
+  var logoScroll = document.getElementById("main-header")
   if (window.innerWidth > 600) {
     if (window.scrollY > 30) {
-      nav.classList.add("scroll")
-      nav2.classList.add("scroll")
-      nav3.classList.add("scroll")
-      nav4.classList.add("scroll")
+      headerScroll.classList.add("scroll")
+      logoScroll.classList.add("scroll")
     }
     if (window.scrollY < 29) {
-      nav.classList.remove("scroll")
-      nav2.classList.remove("scroll")
-      nav3.classList.remove("scroll")
-      nav4.classList.remove("scroll")
+      headerScroll.classList.remove("scroll")
+      logoScroll.classList.remove("scroll")
     }
   }
 }
 
+var hamburguer = document.getElementById("hamburguer")
 
+hamburguer.addEventListener('click', hanimation)
 
-paypal.Buttons({
-  createOrder: function(data, actions) {
-    // Set up the transaction
-    return actions.order.create({
-      purchase_units: [{
-        amount: {
-          value: '0.01'
-        }
-      }]
-    });
-  }
-}).render('#paypal');
+function hanimation() {
+  let background = document.getElementById("hblack")
+  let foreground = document.getElementById("hwhite")
+  background.classList.toggle("appear")
+  foreground.classList.toggle("appear")
+}
