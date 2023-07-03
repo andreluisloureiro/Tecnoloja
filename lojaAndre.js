@@ -13,7 +13,7 @@ function ready() {
     buttonRemove.addEventListener('click', removeCartItem)
   }
 
-  var addCartItemButtons = document.getElementsByClassName('botaoCompra')
+  var addCartItemButtons = document.getElementsByClassName('buyButton')
   for (var o = 0; o < addCartItemButtons.length; o++) {
     var buttonAdd = addCartItemButtons[o]
     buttonAdd.addEventListener('click', addCartItem)
@@ -29,7 +29,7 @@ function addCartItem(event) {
   var itemTittle = shopItem.getElementsByClassName('text')[0].innerText
   var itemPrice = shopItem.getElementsByClassName('itemPrice')[0].innerText
   var imageSrc = shopItem.getElementsByClassName('itemImage')[0].src
-  var imagemCarrinho = shopItem.getElementsByClassName('carrinhoItem')[0]
+  var imagemCarrinho = shopItem.getElementsByClassName('cartAddedDiv')[0]
   var text = button.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling
   text.classList.add("appear")
   timeout = setTimeout(appeartext, 200);
@@ -67,7 +67,7 @@ function remover(itemTittle) {
 function addItemToCart(itemTittle, itemPrice, imageSrc) {
   var cartRow = document.createElement('div')
   cartRow.classList.add('divGeralBaixo')
-  var cartItems = document.getElementsByClassName('carrinhoPrincipal')[0]
+  var cartItems = document.getElementsByClassName('cartMainDiv')[0]
   var cartItemNames = cartItems.getElementsByClassName('itemTitulo')
 
   for (var i = 0; i < cartItemNames.length; i++) {
@@ -153,10 +153,10 @@ function change(event) {
     // }
     valorTotal = valorTotal + (itemPriceParsed * quantidade)
   }
-  var preçoEmBaixo = document.getElementsByClassName('preçoTotal')[0]
-  var preçoEmBaixo2 = document.getElementsByClassName('preçoTotal2')[0]
+  var preçoEmBaixo = document.getElementsByClassName('totalPrice')[0]
+  var preçoEmBaixo2 = document.getElementsByClassName('totalPrice2')[0]
   preçoEmBaixo.innerHTML = valorTotal
-  preçoEmBaixo2.innerHTML = "R$" +  valorTotal
+  preçoEmBaixo2.innerHTML = "$" +  valorTotal
   if (valorTotal === 0) {
     var animationcartButton = document.getElementsByClassName('cartButton')[0]
     introLoja()
@@ -191,9 +191,9 @@ function introCarrinho() {
 
   timeout = setTimeout(animation5, 800);
   function animation5() {
-    var animation = document.getElementsByClassName('carrinhoAnim')[0]
+    var animation = document.getElementsByClassName('cartContainerDiv')[0]
     animation.classList.toggle('carrinhoMovimento')
-    var animation6 = document.getElementsByClassName('carrinhoAnim')[0]
+    var animation6 = document.getElementsByClassName('cartContainerDiv')[0]
     animation6.classList.toggle('carrinhoRelative')
   }
   var animationcartButton = document.getElementsByClassName('cartButton')[0]
@@ -220,12 +220,12 @@ function introLoja() {
   function animation3() {
     var topicosFixed2 = document.getElementsByClassName('topicos')[0]
     topicosFixed2.classList.toggle('topicosFixed')
-    var animation6 = document.getElementsByClassName('carrinhoAnim')[0]
+    var animation6 = document.getElementsByClassName('cartContainerDiv')[0]
     animation6.classList.toggle('carrinhoRelative')
   }
 
   function animation5() {
-    var animation = document.getElementsByClassName('carrinhoAnim')[0]
+    var animation = document.getElementsByClassName('cartContainerDiv')[0]
     animation.classList.toggle('carrinhoMovimento')
   }
 

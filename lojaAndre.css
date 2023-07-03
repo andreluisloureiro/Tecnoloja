@@ -8,7 +8,7 @@ body {
   background-size: 250% 250%;
   transition: 250ms;
   scroll-behavior: smooth;
-  background-color: #f1f2f3;
+  background-color: #E9EAED;
 }
 
 @keyframes AnimateBG {
@@ -67,7 +67,7 @@ h1 {
   font-size: 40px;
 }
 
-.divTituloTopico {
+.sectionTitleDiv {
   width: 87vw
 }
 
@@ -76,19 +76,18 @@ h1 {
   margin-bottom: 0px;
 }
 
-.tituloTopico {
+.sectionTitle {
   font-family: 'Roboto Condensed', sans-serif;
   font-style: italic;
   font-size: 5vw;
   font-weight: 700;
   margin: 20px;
-  
   color: #27292A;
   width: inherit;
   text-align: left;
 }
 
-.topicoDisplay {
+.itemsDiv {
   display: flex;
   justify-content: space-around;
   width: 90vw;
@@ -98,11 +97,12 @@ h1 {
   flex-direction: row;
 }
 
-.itemDisplay {
+.itemDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 5px;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -116,7 +116,7 @@ h1 {
   min-width: 250px;
 }
 
-.carrinhoItem {
+.cartAddedDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,13 +129,13 @@ h1 {
   width: 200px;
 }
 
-.carrinhoItem.appear {
+.cartAddedDiv.appear {
   position: relative;
   transform: scale(1);
   height: 0px;
 }
 
-.fotoHm {
+.cartAdded {
   height: 1.4vw;
   width: 1.4vw;
   min-height: 20px;
@@ -147,7 +147,7 @@ h1 {
 }
 
 
-.textCompra {
+.addedTextDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,17 +158,22 @@ h1 {
   transform-origin: center;
 }
 
-.textCompra.appear {
+.addedTextDiv.appear {
   margin: 20px;
   height: 20px;
 }
 
-.textCompra.appear {
+.addedTextDiv.appear {
   transform: scale(1);
   transform-origin: center;
 }
 
-.imagemItems {
+.addedText {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+}
+
+.itemImageDiv {
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -236,7 +241,7 @@ button {
   transition: 250ms;
 }
 
-.botaoCompra {
+.buyButton {
   color: white;
   background-color: #2d776b;
   border: none;
@@ -245,7 +250,7 @@ button {
   font-weight: 700;
   width: 17vw;
   min-width: 232px;
-  font-size: max(1.2vw, 18px);
+  font-size: max(1.3vw, 18px);
   margin-bottom: 10x;
   cursor: pointer;
   box-shadow: 0px 3px 0px 0px #ecf843;
@@ -301,17 +306,16 @@ button {
   transform-origin: center;
 }
 
-.titulos {
+.cartTitles {
   display: flex;
   align-items: center;
   text-align: center;
   flex-direction: row;
   justify-content: center;
   margin-top: 100px;
-
 }
 
-.divTitulo {
+.cartTitleDiv {
   width: 85vw;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -322,7 +326,7 @@ button {
   margin: 20px;
 }
 
-.titulosCarrinho {
+.cartTittle {
   right: 50px;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.8vw;
@@ -456,7 +460,7 @@ button {
   width: 14px;
 }
 
-.preçoTotal {
+.totalPrice {
   display: flex;
   align-items: left;
   justify-content: center;
@@ -469,7 +473,7 @@ button {
   color: #27292A;
 }
 
-.carrinhoPrincipal {
+.cartMainDiv {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -634,7 +638,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-.preçoTotal2 {
+.totalPrice2 {
   font-family: 'Roboto Condensed', sans-serif;
   border: black;
   font-size: 1.8vw;
@@ -725,7 +729,7 @@ input::-webkit-inner-spin-button {
   position: fixed;
 }
 
-.carrinhoAnim {
+.cartContainerDiv {
   transform: translateX(-1500px);
   transition: 1100ms ease-in-out;
   display: flex;
@@ -737,11 +741,11 @@ input::-webkit-inner-spin-button {
 
 }
 
-.carrinhoAnim.carrinhoMovimento {
+.cartContainerDiv.carrinhoMovimento {
   transform: translateX(0px);
 }
 
-.carrinhoAnim.carrinhoRelative {
+.cartContainerDiv.carrinhoRelative {
   position: relative;
 }
 
@@ -758,14 +762,14 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width : 600px) {
-  .divTitulo {
+  .cartTitleDiv {
     width: 80vw;
     padding-left: 5vw;
     padding-right: 5vw;
     margin: 0px;
   }
 
-  .titulos {
+  .cartTitles {
     text-align: center;
     margin-top: 80px;
   }
@@ -781,7 +785,7 @@ input::-webkit-inner-spin-button {
     transform: translateX(-600px);
   }
 
-  .carrinhoAnim {
+  .cartContainerDiv {
     transform: translateX(-600px);
   }
 
@@ -826,17 +830,17 @@ input::-webkit-inner-spin-button {
     width: 30vw;
   }
 
-  .divTitulo {
+  .cartTitleDiv {
     width: 90vw;
     justify-content: center;
     font-size: 2.3vw;
   }
 
-  .titulosCarrinho {
+  .cartTittle {
     font-size: 6vw;
   }
 
-  .preçoTotal {
+  .totalPrice {
     font-size: 6vw;
   }
 
@@ -915,26 +919,26 @@ input::-webkit-inner-spin-button {
     transform: translateX(-2800px);
   }
 
-  .carrinhoAnim {
+  .cartContainerDiv {
     transform: translateX(-2800px);
   }
 
 
-  .itemDisplay {
-   
+  .itemDiv {
+    margin: 0px;
     height: 25vw;
     width: 18vw;
     
   }
 
   
-  .textCompra.appear {
+  .addedTextDiv.appear {
   margin-bottom: 1vw;
   }
 
 }
 
-.hamburguer {
+/* .hamburguer {
   display: flex;
   position: absolute;
   left: 0px;
@@ -980,4 +984,4 @@ input::-webkit-inner-spin-button {
 .hamburguerForeground.appear{
   opacity: 100%; 
   transform: translateX(0px);
-}
+} */
