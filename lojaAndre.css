@@ -775,7 +775,7 @@ input::-webkit-inner-spin-button {
     margin-top: 80px;
   }
 
-  .tituloTopico {
+  .sectionTitle{
     font-size: 9vw;
     justify-content: center;
     text-align: center;
@@ -924,6 +924,9 @@ input::-webkit-inner-spin-button {
     transform: translateX(-2800px);
   }
 
+  .itemsDiv {
+    width: 95vw;
+  }
 
   .itemDiv {
     margin: 0px;
