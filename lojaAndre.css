@@ -835,6 +835,10 @@ input::-webkit-inner-spin-button {
   }
 
   .topicos {
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: 0px;
     margin-top: 75px;
   }
 
@@ -863,6 +867,8 @@ input::-webkit-inner-spin-button {
     height: 120px;
     border-radius: 5px;
     margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .itemName {
@@ -909,7 +915,7 @@ input::-webkit-inner-spin-button {
   }
 
   .divDivItemTitulo {
-    width: auto;
+    width: 43vw;
     margin: 0px;
   }
 
@@ -922,11 +928,6 @@ input::-webkit-inner-spin-button {
   }
 
   .divInput {
-    margin: 0px;
-  }
-
-  .divItemTitulo {
-    width: 38vw;
     margin: 0px;
   }
 
