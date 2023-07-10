@@ -617,7 +617,8 @@ input::-webkit-inner-spin-button {
 }
 
 .input {
-  width: 25px;
+  width: 35px;
+  height: 35px;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 5px;
   border: black;
