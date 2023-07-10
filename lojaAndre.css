@@ -97,7 +97,7 @@ h1 {
   flex-direction: row;
 }
 
-.itemDiv{
+.itemDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,8 +362,6 @@ button {
   width: inherit;
 }
 
-
-
 .itemNameDiv {
   display: flex;
   align-items: center;
@@ -372,7 +370,7 @@ button {
   transition: 250ms;
 }
 
-.itemName{
+.itemName {
   width: 8.5vw;
   margin: 0px;
   position: relative;
@@ -670,7 +668,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-.imagemLoja{
+.imagemLoja {
   height: 25px;
   width: 25px;
   cursor: pointer;
@@ -775,12 +773,57 @@ input::-webkit-inner-spin-button {
     margin-top: 80px;
   }
 
-  .sectionTitle{
+  .sectionTitle {
     font-size: 9vw;
     justify-content: center;
     text-align: center;
     width: auto;
   }
+
+  .itemsDiv {
+    width: 98vw;
+  }
+  .itemDiv {
+    margin: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clip-path: polygon(25px 0%, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0% 25px);
+    height: 24vw;
+    width: 42vw;
+    min-height: 370px;
+    min-width: 160px;
+  }
+
+  .itemImage {
+    height: 7vw;
+    width: 7vw;
+    min-height: 150px;
+    min-width: 150px;
+  }
+
+  .textItems {
+    width: 10vw;
+    min-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .textItems2 {
+    width: 10vw;
+    min-width: 150px; 
+  }
+
+  .buyButton {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    width: 10vw;
+    min-width: 160px;
+    font-size: max(1.3vw, 18px);
+    margin-bottom: 10x;
+    margin: 20px;
+    clip-path: polygon(18px 0%, 100% 0%, calc(100% - 18px) 100%, 0% 100%);
+}
 
   .topicos.topicosMovimento {
     transform: translateX(-600px);
@@ -802,7 +845,6 @@ input::-webkit-inner-spin-button {
     height: 60px;
   }
 
-
   .cartButton {
     top: 0px;
   }
@@ -820,7 +862,20 @@ input::-webkit-inner-spin-button {
     height: 120px;
     border-radius: 5px;
     margin-bottom: 20px;
+  }
 
+  .itemName {
+    font-size: 0vw;
+  }
+
+  .priceInfo {
+    font-size: 0vw;
+  }
+
+  .totalPrice2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    border: black;
+    font-size: 0vw;
   }
 
   .divFotoItemCarrinho {
@@ -924,20 +979,15 @@ input::-webkit-inner-spin-button {
     transform: translateX(-2800px);
   }
 
-  .itemsDiv {
-    width: 95vw;
-  }
-
   .itemDiv {
     margin: 0px;
     height: 25vw;
     width: 18vw;
-    
+
   }
 
-  
   .addedTextDiv.appear {
-  margin-bottom: 1vw;
+    margin-bottom: 1vw;
   }
 
 }
@@ -956,7 +1006,7 @@ input::-webkit-inner-spin-button {
   position: fixed;
   z-index: 3;
   width: 100vw;
-  height:  100vh;
+  height: 100vh;
   background-color: black;
   color: #27292A;
   opacity: 0%;
@@ -965,27 +1015,27 @@ input::-webkit-inner-spin-button {
   pointer-events: none;
 }
 
-#hblack.appear{
+#hblack.appear {
   z-index: 3;
   opacity: 30%;
 }
 
-.hamburguerForeground{
+.hamburguerForeground {
   display: flex;
   position: fixed;
   z-index: 4;
   width: 5vw;
-  height:  100vh;
+  height: 100vh;
   background-color: white;
   top: 0px;
   opacity: 0%;
   transition: 600ms;
   pointer-events: none;
   transform: translateX(-20vw);
-  
+
 }
 
-.hamburguerForeground.appear{
-  opacity: 100%; 
+.hamburguerForeground.appear {
+  opacity: 100%;
   transform: translateX(0px);
 }
