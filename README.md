@@ -4,12 +4,11 @@
   <br>
   <b>Tecnoloja</b>
   <br>
-  <sub><sup><b>Site de compras feito com Javascript e CSS</b></sup></sub>
+  <sub><sup><b>Shopping Cart Project made with JavaScript</b></sup></sub>
   <br>
 
 </h1>
 
 <p align="center">
-     Tecnoloja é um dos meus primeiros projetos, e é uma site de compras feito com Javascript e CSS puros. O site contém duas páginas, a página de itens e o carrinho, 
-  além de ser dinâmica, sendo possível visualizar em computadores, tablets e celulares.
+     Tecnoloja was one of my firsts projects, it is a basic Shopping Cart Project made with JavaScript and has "dynamic" CSS.
 </p>
