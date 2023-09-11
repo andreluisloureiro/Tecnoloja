@@ -10,5 +10,5 @@
 </h1>
 
 <p align="center">
-     Tecnoloja was one of my first projects, its a basic Shopping Cart Project made with JavaScript and "dynamic" CSS.
+     Tecnoloja was one of my first projects, it's a basic Shopping Cart Project made with JavaScript and "dynamic" CSS.
 </p>
