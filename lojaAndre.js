@@ -239,7 +239,6 @@ document.getElementById("closeHamburguer").addEventListener('click', hanimation)
 document.getElementById("hblack").addEventListener('click', hanimation)
 
 function hanimation() {
-  console.log("hm")
   let background = document.getElementById("hblack")
   let foreground = document.getElementById("hwhite")
   background.classList.toggle("appear")

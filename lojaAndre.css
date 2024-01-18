@@ -92,7 +92,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100vw;
+  width: 97vw;
   align-items: center;
   text-align: center;
   flex-direction: row;
@@ -188,7 +188,7 @@ h1 {
   width: 13vw;
   min-height: 200px;
   min-width: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5%;
   margin: 10px;
   margin-bottom: 0px;
