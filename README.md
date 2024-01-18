@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://andreluisloureiro.github.io/Tecnoloja/"><img src="https://imageupload.io/ib/tC81CY9cUXsmdRX_1694406683.png" alt="Tecnoloja" width="500" color="white"></a>
+  <a href="https://andreluisloureiro.github.io/Tecnoloja/"></a>
   <br>
   <b>Tecnoloja</b>
   <br>
