@@ -855,6 +855,9 @@ input::-webkit-inner-spin-button {
 
 .hamburguerLink{
   width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width : 600px) {
@@ -1065,7 +1068,7 @@ input::-webkit-inner-spin-button {
   }
 
   .cartButton.appear {
-    transform: translateX(-4.2vw);
+    transform: translateX(-5.8vw);
   }
 
   .cartButton.movimento {
@@ -1074,12 +1077,13 @@ input::-webkit-inner-spin-button {
 
   .hamburguerForeground {
     top: -15px;
-    width: 10vw;
-
+    width: 15vw;
+    display: flex;
+    align-items: center;
   }
 
   .divCloseHamburguer {
-    width: 10vw;
+    width: 15vw;
   }
 
 }
