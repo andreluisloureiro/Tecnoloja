@@ -8,25 +8,20 @@
   <link rel="icon" href="https://iili.io/HisXnAQ.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>Loja André</title>
+  <link rel="preload" as="style" href="FontUrl&display=swap" />
+  <link rel="stylesheet" href="FontUrl&display=swap" media="print" onload="this.media='all'" />
   <script src="lojaAndre.js" defer></script>
+  <title>Loja André</title>
 </head>
 
 <body>
 
   <header class="main-header" id="main-header">
-
-    <!-- <svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg" id="hamburguer" class="hamburguer">
-      <path
-        d="M1 0h14a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 6h14a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 6h14a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z"
-        fill-rule="evenodd"></path>
-    </svg> -->
-
-
+    <div class="divCloseHamburguer" id="divHamburguer">
+      <svg width="15px" height="15px" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg" id="hamburguer" class="hamburguer"><path d="M1 0h14a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 6h14a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 6h14a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z" fill-rule="evenodd"></path> </svg> 
+    </div>
+ 
     <div class="itensSuperiores">
-
       <div class="botaoLoja" id="botaoLoja">
         <img src="https://i.pinimg.com/originals/b3/f1/da/b3f1da70927cc796e51f5a9066dde860.png" alt=""
           class="imagemLoja">
@@ -37,15 +32,21 @@
       <div class="cartButton" id="cartButton">
         <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" class="imagemCarrinho">
       </div>
-
     </div>
-
-
   </header>
 
-  <div id="hwhite" class="hamburguerForeground"></div>
+  <div id="hwhite" class="hamburguerForeground">
+    <div class="divCloseHamburguer"><svg class="closeHamburguer" id="closeHamburguer" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none"><path d="M8.00191 9.41621C7.61138 9.02569 7.61138 8.39252 8.00191 8.002C8.39243 7.61147 9.0256 7.61147 9.41612 8.002L12.0057 10.5916L14.5896 8.00771C14.9801 7.61719 15.6133 7.61719 16.0038 8.00771C16.3943 8.39824 16.3943 9.0314 16.0038 9.42193L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.004C15.6133 16.3945 14.9802 16.3945 14.5896 16.004L12.0057 13.42L9.42192 16.0038C9.03139 16.3943 8.39823 16.3943 8.00771 16.0038C7.61718 15.6133 7.61718 14.9801 8.00771 14.5896L10.5915 12.0058L8.00191 9.41621Z" fill="#0F0F0F"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4ZM21 4C21 3.44772 20.5523 3 20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4Z" fill="#0F0F0F"/> </svg>
+    </div>
+    <div class="divCloseHamburguer2"></svg>
+    </div>
+    <div class="divCloseHamburguer2"><a href="https://github.com/andreluisloureiro" target="_blank"><img class="hamburguerLink" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="">
+    </a>
+    </div>
+    <div class="divCloseHamburguer2"><a href="https://www.linkedin.com/in/andr%C3%A9-luis-7634b6b5/" target="_blank"> <img class="hamburguerLink" src="https://iili.io/MBYxtI.png" alt="" style="width: 35px;"> </a>
+    </div>
+  </div>
   <div id="hblack" class="hamburguerBackground"></div>
-
 
   <div id="margin">
 
@@ -106,7 +107,7 @@
           <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" class="cartAdded">
         </div>
         <div class="itemImageDiv">
-          <img src="https://media.cdn.kaufland.de/product-images/1024x1024/eb86face9465c3ead5ea5e926f07ab01.jpg" alt=""
+          <img src="https://api.store.vivo.com.br/medias/515Wx515H-TGSA397R-10-.jpg?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDEwMjU5NHxpbWFnZS9qcGVnfGg1OS9oZDYvODk4ODQyNDY2NzE2Ni81MTVXeDUxNUhfVEdTQTM5N1JfICgxMCkuanBnfGE3NTJlOTdiMzFmMWE1YmJmNDQ0N2U3ZWI4NTMxMzE0MTUxYmM4NWIyOTIwYmNkOWJmMjM0ZjNmYzc5Njk2NjM" alt=""
             class="itemImage">
         </div>
         <div class="textItems">
@@ -127,11 +128,11 @@
           <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" class="cartAdded">
         </div>
         <div class="itemImageDiv">
-          <img src="https://files.tecnoblog.net/wp-content/uploads/2022/02/galaxy-s22-ultra-produto-700x700.png" alt=""
+          <img src="https://www.notebookcheck.info/uploads/tx_nbc2/SamsungGalaxyA41.jpg" alt=""
             class="itemImage">
         </div>
         <div class="textItems">
-          <p class="text">Display S22 Ultra</p>
+          <p class="text">Display A41</p>
         </div>
         <div class="textItems2">
           <p class="itemPrice">$150,00</p>
@@ -207,6 +208,28 @@
         </div>
         <div class="textItems2">
           <p class="itemPrice">$230,00</p>
+        </div>
+        <div>
+          <button class="buyButton" type="button">ADD TO CART</button>
+        </div>
+      </div>
+      <div class="itemDiv">
+        <div class="addedTextDiv">
+          <p href="" class="addedText">ADDED TO CART</p>
+        </div>
+        <div class='cartAddedDiv'>
+          <img src="https://cdn-icons-png.flaticon.com/512/1413/1413908.png" alt="" class="cartAdded">
+        </div>
+        <div class="itemImageDiv">
+          <img
+            src="https://d1r6yjixh9u0er.cloudfront.net/Custom/Content/Products/40/71/4071_redmi-buds-4-pro-x00694_s3_638036839218240315.png"
+            alt="" class="itemImage">
+        </div>
+        <div class="textItems">
+          <p class="text">Redmi Buds 4</p>
+        </div>
+        <div class="textItems2">
+          <p class="itemPrice">$150,00</p>
         </div>
         <div>
           <button class="buyButton" type="button">ADD TO CART</button>

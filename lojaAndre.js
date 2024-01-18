@@ -122,7 +122,6 @@ function removeCartItem(event) {
 
   timeout = setTimeout(altura, 0)
 
-
   function altura() {
   }
   var titulo = buttonClicked.parentElement.previousElementSibling.firstElementChild.firstElementChild.firstElementChild
@@ -156,7 +155,7 @@ function change(event) {
   var preçoEmBaixo = document.getElementsByClassName('totalPrice')[0]
   var preçoEmBaixo2 = document.getElementsByClassName('totalPrice2')[0]
   preçoEmBaixo.innerHTML = valorTotal
-  preçoEmBaixo2.innerHTML = "$" +  valorTotal
+  preçoEmBaixo2.innerHTML = "$" + valorTotal
   if (valorTotal === 0) {
     var animationcartButton = document.getElementsByClassName('cartButton')[0]
     introLoja()
@@ -164,30 +163,12 @@ function change(event) {
   }
 }
 
-
-var cartButton = document.getElementById('cartButton')
-cartButton.addEventListener('click', introCarrinho)
-
-var botaoLoja = document.getElementById('botaoLoja')
-botaoLoja.addEventListener('click', introLoja)
-
-
+var hamburguer = document.getElementById("divHamburguer");
 
 function introCarrinho() {
-
-
-
-  timeout = setTimeout(animation4, 0);
-  function animation4() {
-    var topicosSaida = document.getElementsByClassName('topicos')[0]
-    topicosSaida.classList.toggle('topicosMovimento')
-  }
-
-  timeout = setTimeout(animation3, 800);
-  function animation3() {
-    var topicosFixed = document.getElementsByClassName('topicos')[0]
-    topicosFixed.classList.toggle('topicosFixed')
-  }
+  hamburguer.classList.add("remove");
+  var topicosSaida = document.getElementsByClassName('topicos')[0]
+  topicosSaida.classList.toggle('topicosMovimento')
 
   timeout = setTimeout(animation5, 800);
   function animation5() {
@@ -195,7 +176,10 @@ function introCarrinho() {
     animation.classList.toggle('carrinhoMovimento')
     var animation6 = document.getElementsByClassName('cartContainerDiv')[0]
     animation6.classList.toggle('carrinhoRelative')
+    var topicosFixed = document.getElementsByClassName('topicos')[0]
+    topicosFixed.classList.toggle('topicosFixed')
   }
+
   var animationcartButton = document.getElementsByClassName('cartButton')[0]
   animationcartButton.classList.toggle('movimento')
 
@@ -204,8 +188,6 @@ function introCarrinho() {
     var animationBotaoLoja1 = document.getElementsByClassName('botaoLoja')[0]
     animationBotaoLoja1.classList.toggle('movimento')
   }
-
-
 }
 
 
@@ -214,56 +196,53 @@ function introLoja() {
   function animation4() {
     var topicosEntrada = document.getElementsByClassName('topicos')[0]
     topicosEntrada.classList.toggle('topicosMovimento')
-  }
-
-  timeout = setTimeout(animation3, 900);
-  function animation3() {
     var topicosFixed2 = document.getElementsByClassName('topicos')[0]
     topicosFixed2.classList.toggle('topicosFixed')
     var animation6 = document.getElementsByClassName('cartContainerDiv')[0]
     animation6.classList.toggle('carrinhoRelative')
   }
 
-  function animation5() {
-    var animation = document.getElementsByClassName('cartContainerDiv')[0]
-    animation.classList.toggle('carrinhoMovimento')
-  }
-
-  animation5()
-
+  var animation = document.getElementsByClassName('cartContainerDiv')[0]
+  animation.classList.toggle('carrinhoMovimento')
   var animationBotaoLoja1 = document.getElementsByClassName('botaoLoja')[0]
   animationBotaoLoja1.classList.toggle('movimento')
 
   timeout = setTimeout(delayLoja, 1800);
   function delayLoja() {
+    hamburguer.classList.remove("remove");
     var animationcartButton = document.getElementsByClassName('cartButton')[0]
     animationcartButton.classList.remove('movimento')
   }
-
 }
 
 window.onscroll = () => {
-  var headerScroll = document.getElementById("logoLoja")
-  var logoScroll = document.getElementById("main-header")
+  let headerScroll = document.getElementById("logoLoja")
+  let logoScroll = document.getElementById("main-header")
+  let hwhite = document.getElementById("hwhite")
   if (window.innerWidth > 600) {
     if (window.scrollY > 30) {
       headerScroll.classList.add("scroll")
       logoScroll.classList.add("scroll")
-    }
-    if (window.scrollY < 29) {
+      hwhite.classList.add("scroll")
+    } else {
       headerScroll.classList.remove("scroll")
       logoScroll.classList.remove("scroll")
+      hwhite.classList.remove("scroll")
     }
   }
 }
 
-var hamburguer = document.getElementById("hamburguer")
-
-hamburguer.addEventListener('click', hanimation)
+document.getElementById('cartButton').addEventListener('click', introCarrinho)
+document.getElementById('botaoLoja').addEventListener('click', introLoja)
+document.getElementById("hamburguer").addEventListener('click', hanimation)
+document.getElementById("closeHamburguer").addEventListener('click', hanimation)
+document.getElementById("hblack").addEventListener('click', hanimation)
 
 function hanimation() {
+  console.log("hm")
   let background = document.getElementById("hblack")
   let foreground = document.getElementById("hwhite")
   background.classList.toggle("appear")
   foreground.classList.toggle("appear")
 }
+
