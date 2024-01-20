@@ -591,16 +591,20 @@ button {
   text-align: center;
   justify-content: center;
   flex-direction: row;
-  width: 8.5vw;
-
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5%;
 }
 
 .fotoItemCarrinho {
   width: 100px;
+  height: 100px;
   margin: 0px;
   position: relative;
   display: flex;
   border-radius: 5%;
+  object-fit: contain;
 }
 
 .itemTitulo {
@@ -790,7 +794,7 @@ input::-webkit-inner-spin-button {
 #hblack.appear {
   z-index: 1;
   opacity: 30%;
-  pointer-events:all;
+  pointer-events: all;
 }
 
 .hamburguerForeground {
@@ -811,7 +815,7 @@ input::-webkit-inner-spin-button {
 .hamburguerForeground.appear {
   opacity: 100%;
   transform: translateX(0px);
-  pointer-events:all;
+  pointer-events: all;
 }
 
 .hamburguerForeground.scroll {
@@ -853,7 +857,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.hamburguerLink{
+.hamburguerLink {
   width: 44px;
   display: flex;
   justify-content: center;
