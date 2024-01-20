@@ -782,8 +782,8 @@ input::-webkit-inner-spin-button {
   display: flex;
   position: fixed;
   z-index: 3;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: black;
   color: #27292A;
   opacity: 0%;
